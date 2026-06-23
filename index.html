@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>成人跑酷初階班 | 零基礎入門</title>
+    <title>成人跑酷常態班 | 零基礎入門</title>
     <style>
         /* 基礎設定：深灰質感背景 */
         body { font-family: 'Helvetica Neue', Arial, sans-serif; margin: 0; padding: 0; background-color: #1a1a1a; color: #ffffff; line-height: 1.7; }
@@ -17,16 +17,11 @@
         .hero { position: relative; background: linear-gradient(rgba(37, 37, 37, 0.85), rgba(37, 37, 37, 0.85)), url('cover.jpg'); background-size: cover; background-position: center; padding: 60px 30px; text-align: center; border-radius: 12px; margin-bottom: 35px; border: 1px solid #444; box-shadow: 0 8px 25px rgba(0,0,0,0.3); }
         .hero h1 { color: #FFD700; margin-top: 0; font-size: 34px; font-weight: 900; letter-spacing: 2px; text-shadow: 0 2px 4px rgba(0,0,0,0.8); }
         .hero p { font-size: 16px; color: #dddddd; max-width: 600px; margin: 0 auto 30px auto; line-height: 1.8; text-shadow: 0 1px 3px rgba(0,0,0,0.8); }
-        
-        /* 💡 修正 1：移除時間地點的框線與背景，讓它跟外層背景一樣黑 */
         .hero-info { font-size: 16px; font-weight: bold; display: inline-block; margin: 0 auto; text-align: left; line-height: 2; text-shadow: 0 1px 3px rgba(0,0,0,0.8); }
 
-        /* 🔥 教練資訊區塊 */
+        /* 教練資訊區塊 */
         .coach-section { display: flex; flex-direction: column; gap: 20px; background: #1e1e1e; padding: 25px; border-radius: 12px; margin-bottom: 40px; border: 1px solid #444; }
-        
-        /* 💡 修正 2：照片改為 9:16 直式比例 */
         .coach-img { width: 100%; max-width: 220px; aspect-ratio: 9 / 16; object-fit: cover; object-position: center center; border-radius: 12px; margin: 0 auto; border: 2px solid #333; }
-        
         .coach-info { flex: 1; text-align: left; }
         .coach-info h3 { color: #FFD700; text-align: left; margin-top: 0; font-size: 22px; border: none; padding: 0; margin-bottom: 15px; }
         .coach-info p { color: #cccccc; margin-bottom: 8px; line-height: 1.6; }
@@ -68,6 +63,16 @@
         .form-row { display: flex; gap: 15px; flex-wrap: wrap; }
         .form-row .form-group { flex: 1; min-width: 200px; }
         
+        /* 滑動免責聲明區塊樣式 */
+        .disclaimer-container { background: #1e1e1e; border: 1px solid #444; border-radius: 8px; padding: 20px; margin-bottom: 20px; text-align: left; }
+        .disclaimer-container h4 { color: #FFD700; margin-top: 0; font-size: 16px; border-bottom: 1px solid #333; padding-bottom: 10px; margin-bottom: 15px; }
+        .disclaimer-scroll-box { max-height: 220px; overflow-y: auto; padding-right: 15px; color: #bbbbbb; font-size: 13.5px; line-height: 1.6; }
+        .disclaimer-scroll-box::-webkit-scrollbar { width: 6px; }
+        .disclaimer-scroll-box::-webkit-scrollbar-thumb { background: #FFD700; border-radius: 4px; }
+        .disclaimer-scroll-box::-webkit-scrollbar-track { background: #2a2a2a; border-radius: 4px; }
+        .disclaimer-scroll-box ol { padding-left: 20px; margin-top: 5px; }
+        .disclaimer-scroll-box li { margin-bottom: 10px; }
+
         .checkbox-group { display: flex; align-items: flex-start; gap: 12px; text-align: left; margin-bottom: 30px; background: #1e1e1e; padding: 20px; border-radius: 8px; border: 1px solid #444; }
         .checkbox-group input[type="checkbox"] { width: 22px; height: 22px; margin-top: 3px; accent-color: #FFD700; cursor: pointer; flex-shrink: 0; }
         .checkbox-group label { font-weight: normal; font-size: 14px; color: #cccccc; cursor: pointer; line-height: 1.5; }
@@ -101,22 +106,26 @@
         <img src="個人近照1.jpg" alt="教練 王信傑" class="coach-img">
         <div class="coach-info">
             <h3>王信傑</h3>
-            <p><span class="highlight">訓練年資：</span>6年</p>
-            <p><span class="highlight">教學年資：</span>4年</p>
-            <p><span class="highlight">個人經歷：</span><br>
-            🔸 2024 新加坡 LCG 盃 冠軍<br>
-            🔸 2024 全國跑酷大賽 冠軍<br>
-            🔸 2025 中華民國跑酷協會 理事長<br>
-            🔸 2026 跑酷亞洲盃 速度賽亞軍</p>
+            <p>
+                <span class="highlight">訓練年資：</span>6年<br>
+                <span class="highlight">教學年資：</span>4年<br>
+                <span class="highlight">個人經歷：</span><br>
+                🔸 2024 新加坡 LCG 盃 冠軍<br>
+                🔸 2024 全國跑酷大賽 冠軍<br>
+                🔸 2025 中華民國跑酷協會 理事長<br>
+                🔸 2026 跑酷亞洲盃 速度賽亞軍
+            </p>
             
             <div class="coach-links">
                 <a href="https://portaly.cc/xinjia/pages/about" target="_blank">📄 完整資訊</a>
                 <a href="https://www.instagram.com/reel/DEM3-vCzi7_/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" target="_blank">🎬 跑酷影片</a>
             </div>
             
-            <p><span class="highlight">聯絡資訊：</span><br>
-            LINE ID：0968622060<br>
-            IG：<a href="https://instagram.com/xinjia.pk" target="_blank" style="color:#FFD700; text-decoration:none;">xinjia.pk</a></p>
+            <p>
+                <span class="highlight">聯絡資訊：</span><br>
+                LINE ID：0968622060<br>
+                IG：<a href="https://instagram.com/xinjia.pk" target="_blank" style="color:#FFD700; text-decoration:none;">xinjia.pk</a>
+            </p>
         </div>
     </div>
 
@@ -172,10 +181,10 @@
     </div>
 
     <div class="rules">
-        <h3>⚠️ 報名與上課須知</h3>
+        <h3>⚠️ 報名與上課須知 (請務必閱讀)</h3>
         <ul>
             <li><span class="highlight">匯款資訊：</span> 中華郵政 (700) 03118010164930</li>
-            <li><span class="highlight">報名機制：</span>報名與匯款成功後，會將您加入專屬 LINE 課程群組，掌握最新上課資訊。</li>
+            <li><span class="highlight">報名機制：</span>報名與匯款成功後，將邀請您加入專屬 LINE 課程群組，掌握最新上課資訊。</li>
             <li><span class="highlight">課前準備：</span>請穿著舒適、好延展的運動服飾及運動鞋，並攜帶水壺與毛巾！</li>
             <li><span class="highlight">安全聲明：</span>教練將提供最安全的循序漸進指導，但學員需自行評估身體狀況。</li>
         </ul>
@@ -183,7 +192,7 @@
 
     <div class="form-section">
         <h2>填寫報名表</h2>
-        <p class="form-section-p">請填寫下方真實資訊完成報名</p>
+        <p class="form-section-p">請填寫下方真實資訊完成報名，送出後系統將引導至確認頁面。</p>
             
         <form action="https://docs.google.com/forms/d/1cs0DpUXYa5-xE-0kBWkQCooHUSufs5nhwvTljj6W_zE/formResponse" method="POST" id="parkourForm">
             
@@ -205,11 +214,11 @@
             <div class="form-row">
                 <div class="form-group">
                     <label for="em_name">緊急聯絡人姓名</label>
-                    <input type="text" id="em_name" name="entry.1216478844" required>
+                    <input type="text" id="em_name" name="entry.XXXXX1" required>
                 </div>
                 <div class="form-group">
                     <label for="em_phone">緊急聯絡人電話</label>
-                    <input type="tel" id="em_phone" name="entry.990431784" required>
+                    <input type="tel" id="em_phone" name="entry.XXXXX2" required>
                 </div>
             </div>
 
@@ -260,10 +269,10 @@
                     <p>※ 當您勾選下方「同意」選項並送出表單，即表示您已確實閱讀、充分理解並完全同意上述所有條款。</p>
                 </div>
             </div>
-            
+
             <div class="checkbox-group">
                 <input type="checkbox" id="agree" name="entry.1351026863" value="本人確認已閱讀並理解所有課程風險，並同意遵守教練的指導，為自己的安全負責。" required>
-                <label for="agree">請閱讀並同意《課程安全聲明與免責條款》：<br>本人確認已閱讀並理解所有課程風險，並同意遵守教練的指導，為自己的安全負責。</label>
+                <label for="agree">本人確認已閱讀並理解上方《課程安全聲明與免責條款》，並同意遵守教練的指導，為自己的安全負責。</label>
             </div>
 
             <button type="submit" class="submit-btn">確認送出報名表</button>
